@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "javaType": "de.ffm.rka.schema.json.DeliveryAddress",
+  "properties": {
+    "AddressLine" : {"type":  "string"},
+    "City" : {"type":  "string"},
+    "State" : {"type":  "string"},
+    "ContactNumber" : {"type":  "string"}
+  }
+}

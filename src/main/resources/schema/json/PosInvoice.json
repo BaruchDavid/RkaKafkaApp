@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "javaType": "de.ffm.rka.schema.json.PosInvoice",
+   // PosINvoice erbt von de.ffm.rka.Invoice.json
+    "extends": {"$ref":  "Invoice.json"},
+  "properties": {
+    "StoreID:": {"type": "string"},
+    "PosID": {"type":"string"},
+    "CustomerType": {"type": "string"},
+    "DeliveryType": {"type":"string"},
+    "DelieryAddress": {
+      "type": "object",
+      "$ref": "DeliveryAddress.json"
+    }
+  }
+}

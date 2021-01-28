@@ -1,0 +1,25 @@
+{
+  "object":  "invoice",
+  "javaObject":  "de.ffm.rka.schema.json.Invoice",
+  "properties": {
+    "InvoiceNumber": {"type": "string"},
+    //Zeit wird als Long deklariert
+    //aber es gibts keinen Long der dieser Dependency
+    //Man kann stattdessen gewöhnliche Java-Klassen verwenden
+    "InvoiceNumber": {"type": "object", "javaType": "java.lang.Long"},
+    "CustomerCardNo": {"type": "string"},
+    "TotalAmount": {"type": "number"},
+    "NumberOfItem": {"type": "integer"},
+    "PaymentMethod": {"type": "string"},
+    "TaxableAmount": {"type": "number"},
+    "CGST": {"type": "number"},
+    "SGCT": {"type": "number"},
+    "CESS": {"type": "number"},
+    "InvoiceLineItems": {"type": "array", "times":  {
+        "type": "object",
+        "$ref": "LineItem.json"
+      }
+    }
+  }
+
+}
